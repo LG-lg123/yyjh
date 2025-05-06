@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动计算</title>
+    <style>
+      td input {
+        width: 100px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <th>
+        <tr>
+          <td></td>
+          <td>铜</td>
+          <td>铁</td>
+          <td>银</td>
+          <td>金</td>
+        </tr>
+      </th>
+      <tr>
+        <td>库房</td>
+        <td><input id="t1" type="tel" oninput="tInputHandle()" /></td>
+        <td><input id="T1" type="tel" oninput="TInputHandle()" /></td>
+        <td><input id="y1" type="tel" oninput="yInputHandle()" /></td>
+        <td><input id="j1" type="tel" oninput="jInputHandle()" /></td>
+      </tr>
+      <tr>
+        <td>锻打房</td>
+        <td><input id="t2" type="tel" oninput="tInputHandle()" /></td>
+        <td><input id="T2" type="tel" oninput="TInputHandle()" /></td>
+        <td><input id="y2" type="tel" oninput="yInputHandle()" /></td>
+        <td><input id="j2" type="tel" oninput="jInputHandle()" /></td>
+      </tr>
+      <tr>
+        <td>火炉房</td>
+        <td><input id="t3" type="tel" oninput="tInputHandle()" /></td>
+        <td><input id="T3" type="tel" oninput="TInputHandle()" /></td>
+        <td><input id="y3" type="tel" oninput="yInputHandle()" /></td>
+        <td><input id="j3" type="tel" oninput="jInputHandle()" /></td>
+      </tr>
+      <tr>
+        <td>总数</td>
+        <td><span id="t4"></span></td>
+        <td><span id="T4"></span></td>
+        <td><span id="y4"></span></td>
+        <td><span id="j4"></span></td>
+      </tr>
+    </table>
+  </body>
+
+  <script>
+    function tInputHandle() {
+      t4.textContent = Number(t1.value) + Number(t2.value) + Number(t3.value);
+    }
+    function TInputHandle() {
+      T4.textContent = Number(T1.value) + Number(T2.value) + Number(T3.value);
+    }
+    function yInputHandle() {
+      y4.textContent = Number(y1.value) + Number(y2.value) + Number(y3.value);
+    }
+    function jInputHandle() {
+      j4.textContent = Number(j1.value) + Number(j2.value) + Number(j3.value);
+    }
+  </script>
+</html>
